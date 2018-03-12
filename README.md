@@ -1,6 +1,6 @@
 # aliyun-ai
 
-Aliyun AI service Go SDK.
+Aliyun AI Go SDK, service details:
 
 - [Ntelligent Speech Interaction](https://data.aliyun.com/product/nls)
 - [Face Recognition](https://data.aliyun.com/product/face)
@@ -8,7 +8,6 @@ Aliyun AI service Go SDK.
 - [Image Search](https://www.aliyun.com/product/imagesearch)
 - [OCR](https://data.aliyun.com/product/ocr)
 - [Natural Language Processing](https://data.aliyun.com/product/nlp)
-
 
 ## Progress
 
