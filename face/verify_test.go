@@ -1,7 +1,6 @@
 package face
 
 import (
-	"encoding/base64"
 	"io/ioutil"
 	"os"
 	"testing"
@@ -19,22 +18,18 @@ func TestVerify(t *testing.T) {
 		30*time.Second,
 	))
 
-	image1, _ := ioutil.ReadFile("./face1.png")
-	image2, _ := ioutil.ReadFile("./face1.png")
+	img1, _ := ioutil.ReadFile("./face1.png")
+	img2, _ := ioutil.ReadFile("./face1.png")
 
-	img1 := base64.StdEncoding.EncodeToString(image1)
-	img2 := base64.StdEncoding.EncodeToString(image2)
-
-	ret, err := faceClient.Verify(ImageTypeContent, img1, img2)
+	ret, err := faceClient.VerifyWithContent(img1, img2)
 
 	assertion := assert.New(t)
 	assertion.Nil(err)
 	assertion.True(ret.IsOK())
 
-	image3, _ := ioutil.ReadFile("./face2.png")
-	img3 := base64.StdEncoding.EncodeToString(image3)
+	img3, _ := ioutil.ReadFile("./face2.png")
 
-	ret, err = faceClient.Verify(ImageTypeContent, img1, img3)
+	ret, err = faceClient.VerifyWithContent(img1, img3)
 
 	assertion.Nil(err)
 	assertion.False(ret.IsOK())
