@@ -6,8 +6,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golib/assert"
 	"github.com/songjiayang/aliyun-ai/client"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestVerify(t *testing.T) {

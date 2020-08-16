@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/qiniu/bytes/seekable"
+	"github.com/qiniu/x/bytes/seekable"
 )
 
 type Client struct {

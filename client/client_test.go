@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/golib/assert"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestNewClient(t *testing.T) {
